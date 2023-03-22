@@ -72,6 +72,17 @@ A instrução acima define ```data_type``` como um apelido para o tipo ```int```
 - um inteiro para armazenar a capacidade atual do Vector  i.e., o número de itens alocados ou qual é o limite máximo de itens que podemos armazenar; e 
 - um inteiro para armazenar o tamanho do vector, i.e., quantos itens de fato foram inseridos até o momento.
 
+```
+typedef struct
+{
+    data_type *data;
+    int size;
+    int allocated;
+} Vector;
+```
+
+**Mantenha os atributos com os nomes especificados acima para este laboratório e defina a estrutura no arquivo .h**.
+
 4. Adicione as declarações das funções para manipulação de vectors que vamos implementar. Utilizaremos na disciplina o padrão de nomear as funções como ```tipo_acao```, por exemplo, ```vector_construct```. Implementaremos as seguintes funções: 
 
 ```
