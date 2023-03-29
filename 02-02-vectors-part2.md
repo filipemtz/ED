@@ -42,19 +42,19 @@ void vector_clear(Vector *v);
 
 A função ```vector_remove``` deve receber um ponteiro para o vetor e um índice ```i``` como parâmetros e remover o i-ésimo elemento. O valor deve ser retornado pela função de forma que se for um ponteiro, o usuário do tipo possa desalocá-lo. Para implementar a função, use um loop for para deslocar todos os elementos à direita de ```i``` uma posição para a esquerda de forma a "tapar o buraco" criado com a remoção do elemento. A função deve atualizar o tamanho do vetor ao final. A função ```vector_pop_front``` deve remover o primeiro elemento e a função ```vector_pop_back``` deve remover o último elemento. Use a função ```vector_remove``` para implementá-las. Não deixe de utilizar o valgrind para verificar se não foram feitos acessos inválidos. 
 
-Use as funções para resolver os dois primeiros exercícios da seção no [Testr](http://200.137.66.71:8000/testr/course/5).
+Use as funções para resolver os dois primeiros exercícios da seção no [Testr](http://200.137.66.71:8000/).
 
 ## 8. Inserção na i-esima posicao
 
 A função ```vector_insert``` deve receber um ponteiro para o vetor, um índice ```i``` e um valor ```val``` como parâmetros e inserir o valor ```val``` na i-ésima posição do vetor. Para "abrir   espaço" para o novo item, todos os elementos à direita de ```i``` devem ser deslocados de uma posição para a direita. Se o vetor já estiver cheio, ele deve ser realocado automaticamente e  a função deve atualizar o tamanho do vetor. 
 
-Use a função para resolver o terceiro exercício da seção no [Testr](http://200.137.66.71:8000/testr/course/5).
+Use a função para resolver o terceiro exercício da seção no [Testr](http://200.137.66.71:8000/).
 
 ## 9. Troca de elementos 
 
 A função ```vector_swap``` deve receber como parâmetros um ponteiro para o vetor e dois índices ```i``` e ```j```  e trocar os elementos do vetor nas posições i e j. Faça testes para verificar que os elementos estão corretos após a troca. Um erro comum é que os elementos fiquem iguais e um dos valores se perca após a troca.
 
-Use a função para resolver o quarto exercício da seção no [Testr](http://200.137.66.71:8000/testr/course/5).
+Use a função para resolver o quarto exercício da seção no [Testr](http://200.137.66.71:8000/).
 
 ## 10. Ordenação In-Place (sem criar um novo Vector)
 
@@ -64,7 +64,7 @@ Veja a [animação](https://visualgo.net/en/sorting) ([alternativa ](https://www
 
 **Dica para melhoria de performance**: Quando o loop interno terminar de percorrer o vetor, deve-se verificar se alguma troca ocorreu. Se não, isso significa que o vetor está ordenado e o loop externo pode ser interrompido.
 
-Use a função para resolver o quinto exercício da seção no [Testr](http://200.137.66.71:8000/testr/course/5).
+Use a função para resolver o quinto exercício da seção no [Testr](http://200.137.66.71:8000/).
 
 ## 11. Busca Binária 
 
@@ -74,7 +74,7 @@ A busca binária é um algoritmo eficiente de busca em um vetor ordenado, que di
 
 Para implementar a busca binária, definimos primeiro um índice mínimo e um máximo que definem  o intervalo em que a busca será realizada. Inicialmente, o intervalo vai do índice 0 até o último índice do vetor, ```n-1```. Em cada iteração do algoritmo, calculamos o índice do elemento central do intervalo. Em seguida, verificamos se o valor buscado ```val``` é menor ou maior do que o elemento central. Se for menor, a busca deve ser realizada na metade esquerda do vetor, ou seja, do índice mínimo até o índice ```central - 1```. Se for maior, a busca deve ser realizada na metade direita do vetor, ou seja, do índice ```central + 1``` até o índice máximo. O processo é repetido até que o valor seja encontrado ou enquanto o índice mínimo é menor que o índice máximo. A segunda condição irá ocorrer quando o elemento não existe no vetor. 
 
-Use a função para resolver o sexto exercício da seção no [Testr](http://200.137.66.71:8000/testr/course/5).
+Use a função para resolver o sexto exercício da seção no [Testr](http://200.137.66.71:8000/).
 
 ## 12. Inversão do Vetor
 
