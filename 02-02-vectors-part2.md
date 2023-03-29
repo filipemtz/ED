@@ -1,6 +1,4 @@
 
-OBS: realloc para tamanho menor
-
 # Vectors (parte 2)
 
 Neste laboratório, vamos continuar implementando a estrutura de dados Vector e seus funções. 
@@ -82,55 +80,15 @@ Use a função para resolver o sexto exercício da seção no [Testr](http://200
 
 A função ```vector_reverse``` deve inverter a ordem dos elementos do vetor *in-place* (sem criar um novo vetor). Use a função ```vector_swap``` na implementação.
 
-## 13. Cria uma cópia do vector e dos valores de seus atributos.
+## [Para Casa] 13. Cria uma cópia do vector e dos valores de seus atributos.
 
 A função ```vector_copy``` deve receber um ponteiro para o vetor como parâmetro e criar uma cópia do vetor e seus atributos (data, size e allocated) em um novo vetor alocado dinamicamente. A função deve retornar um ponteiro para o novo vetor. Use a função ```memcpy``` ([documentação](https://cplusplus.com/reference/cstring/memcpy/)) da ```string.h``` para copiar o campo ```data```. Use o valgrind para verificar se a cópia foi feita corretamente.
 
-## 14. Remoção de Todos os Elementos 
+## [Para Casa] 14. Remoção de Todos os Elementos 
 
 A função ```vector_clear``` deve remover todos os elementos do vetor, definindo o tamanho do vetor como 0. Após a chamada da função, o Vector deve voltar à um estado igual àquele de quando ele é criado. Se o vetor estiver vazio, não devem ocorrer erros ou vazamentos de memória. 
 
+## [Para Casa] 15. Busca por Todas as Ocorrências
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-----------------------
-## 7. Cópia do Vector 
-
-1. Implemente a função ```Vector *vector_copy(Vector *v)```. A função de cópia é interessante porque, diferente da função ```vector_construct```, já sabemos o número de elementos em ```v``` e podemos alocar apenas o espaço necessário para estes elementos, sem necessidade de sobra. Use a função calloc para alocar os espaços necessários para a cópia de ```v``` e, em seguida, use a função memcpy ([explicação](https://cplusplus.com/reference/cstring/memcpy/)) para copiar os elementos de ```v``` para a cópia.
-
-## 8. Remoção de Elementos a Partir do Índice
-
-1. Implemente a função ```Vector *vector_remove(Vector *v, int i)```. Esta uma funçao um pouco mais sofisticada que as demais. Ao remover o i-ésimo elemento de ```v```, ficaremos com um buraco no meio do nosso vetor. Para preencher este buraco, escreva um loop for que, a partir da posição removida até o fim do vetor, copie os elementos para a posição anterior. Ao final, lembre-se de decrementar o tamanho do vetor. 
-
-    **Importante**: Se os elementos do vetor forem dados  alocados usando malloc, a função de remoção também deve liberar o espaço alocado. Abordaremos esta especificidade nas próximas aulas. Por enquanto, como nosso vetor armazena apenas inteiros, não precisamos tomar este cuidado.
-
-Ordenação com bubble sort (dar uma explicação bem detalhada e pseucódigo). 
-
-Inserção na i-ésima posição. 
-
-Inserção no início (usando a função anterior). 
-
-Deleção por valor (primeira ocorrência e todas as ocorrências). 
-
-Uso do Vector para retornar os índices de todas as ocorrências (objetivo: praticar uso de EDs para resolver problemas). 
-
-Reverse. 
-
-Inserção ordenada. 
-
-Continuação da implementação de Vector: Ordenação com bubble sort (dar uma explicação bem detalhada e pseucódigo). Inserção na i-ésima posição. Inserção no início (usando a função anterior). Deleção por posição. Deleção por valor (primeira ocorrência e todas as ocorrências). Uso do Vector para retornar os índices de todas as ocorrências (objetivo: praticar uso de EDs para resolver problemas). Reverse. Inserção ordenada. 
+Escreva uma função ```vector_find_all``` que dado um Vector e um valor, retorne um Vector com os índices de todas as ocorrências do valor. 
 
