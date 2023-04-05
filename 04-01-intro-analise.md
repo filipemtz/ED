@@ -3,7 +3,7 @@
 
 Neste laboratório, vamos analisar de forma empírica (via experimentos computacionais) como o tempo de execução de diferentes algoritmos para uma dada tarefa se comportam para diferentes tamanhos e características de entradas. 
 
-**USE O EDITOR TEXTO WRITER (WORD DO LINUX) PARA RESPONDER AS PERGUNTAS EM BULLET POINTS E ENVIE O ARQUIVO COMO PDF NA TAREFA DO AVA. ADICIONE IMAGENS DE GRÁFICOS NO TEXTO, SE ACHAR NECESSÁRIO, PARA AJUDAR NAS RESPOSTAS.**
+**TAREFA (DEADLINE: 12/04/2023): USE UM EDITOR TEXTO RICO COMO O WRITER DO LINUX OU GOOGLE DOCS PARA RESPONDER AS PERGUNTAS EM BULLET POINTS. ENVIE AS RESPOSTAS COMO PDF NA TAREFA DO AVA. ADICIONE IMAGENS DE GRÁFICOS NO TEXTO, SE ACHAR NECESSÁRIO, PARA AJUDAR NAS RESPOSTAS.**
 
 **Nota**: Quem não implementou o tipo Vector, pode utilizar a implementação do tipo Vector disponível no AVA na Semana 02.
 
