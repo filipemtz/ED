@@ -3,7 +3,7 @@
 
 **Contexto:** Neste laboratório, vamos analisar de forma empírica (via experimentos computacionais) como o tempo de execução de diferentes algoritmos para uma dada tarefa se comportam para diferentes tamanhos e características de entradas. 
 
-**Tarefa (Deadline: 12/04/2023):** Use um editor texto como o writer do linux ou google docs para responder as perguntas em tópicos. Envie as respostas como pdf na tarefa do AVA até a data limite. adicione imagens de gráficos no texto, se achar necessário, para ajudar nas respostas.
+**Tarefa (Deadline: 12/04/2023):** Use um editor texto como o libre office writer do linux ou google docs ou word para responder as perguntas em tópicos. Envie as respostas como pdf na tarefa do AVA até a data limite. adicione imagens de gráficos no texto, se achar necessário, para ajudar nas respostas.
 
 **Nota**: Quem não implementou o tipo Vector, pode utilizar a implementação do tipo Vector disponível no AVA na Semana 02.
 
@@ -176,12 +176,12 @@ gnuplot> plot 'dados.txt' u 1:2 w l, 'dados.txt' u 1:3 w l
 
 Nesta tarefa, vamos **estimar** a performance do algoritmo de busca linear no melhor caso, pior caso e caso médio, assumindo que o item buscado está no vetor. 
 
-Faça um programa que crie iterativamente vetores com N valores, para N variando de 1 até 2000 de 200 em 200. Para cada vetor, selecione M=1000 valores aleatórios uniformemente no vetor e meça o tempo necessário para buscar o índice do elemento usando busca linear. Para cada valor de N, mostre na tela o menor tempo (estimativa do melhor caso), o maior tempo (estimativa do pior caso) e o tempo médio (estimativa do caso médio) das M repetições com 7 casas após a vírgula. Em resumo, deve ser realizado o seguinte experimento: 
+Faça um programa que crie iterativamente vetores com N valores, para N variando de 1 até 2001 de 200 em 200. Para cada vetor, selecione M=1000 valores aleatórios uniformemente no vetor e meça o tempo necessário para buscar o índice do elemento usando busca linear. Para cada valor de N, mostre na tela o menor tempo (estimativa do melhor caso), o maior tempo (estimativa do pior caso) e o tempo médio (estimativa do caso médio) das M repetições com 7 casas após a vírgula. Em resumo, deve ser realizado o seguinte experimento: 
 
 ```
 srand(time(NULL));
 
-Para N de 1 a 2000 variando de 200 em 200: 
+Para N de 1 a 2001 variando de 200 em 200: 
     Crie um vetor V e o preencha com valores aleatórios 
     Repita M vezes: 
         // Gera um índice aleatório
