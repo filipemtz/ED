@@ -231,7 +231,19 @@ A abordagem aproximação das estatísticas (min, max e média) a partir de amot
 
 Quanto maior o valor de M, mais precisa será a estimativa da média. Para alcançar a mesma propriedade para as demais estatísticas (min e max), poderíamos realizar várias medições para cada número sorteado e tirar a média dentre elas. 
 
-Para avaliar o quão boas foram as estimativas do melhor caso e do pior caso, modifique o programa para que também sejam exibidos, para cada valor de N, os tempos para buscar o primeiro e último elementos do vetor. Compare as curvas usando o melhor caso e o pior caso reais e aqueles obtidos das amostras: 
+Para avaliar o quão boas foram as estimativas do melhor caso e do pior caso, modifique o programa para que também sejam exibidos, para cada valor de N, os tempos para buscar o primeiro e último elementos do vetor. Armazene os valores ao final do arquivo de forma que ele tenha o formato: 
+
+```
+N menor maior media primeiroElem ultimoElem
+1 0.01 0.3 0.10 0.01 0.10
+201 0.01 0.4 0.10 0.01 0.10
+401 0.01 0.5 0.20 0.01 0.10
+...
+1801 0.01 1.3 0.45 0.01 0.10
+2001 0.01 1.5 0.50 0.01 0.10
+```
+
+Compare as curvas usando o melhor caso e o pior caso reais e aqueles aproximados usando as M medidas. Considerando as curvas, responda as perguntas:  
 
 * A diferença entre as curvas é grande?  
 * As curvas do pior caso real e do pior caso estimado crescem de formas similares? 
