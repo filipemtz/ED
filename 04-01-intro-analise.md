@@ -176,7 +176,32 @@ gnuplot> plot 'dados.txt' u 1:2 w l, 'dados.txt' u 1:3 w l
 
 Nesta tarefa, vamos **estimar** a performance do algoritmo de busca linear no melhor caso, pior caso e caso médio, assumindo que o item buscado está no vetor. 
 
-Faça um programa que crie iterativamente vetores com N valores, para N variando de 1 até 2000 de 200 em 200. Para cada vetor, selecione M=1000 valores aleatórios uniformemente no vetor e meça o tempo necessário para buscar o índice do elemento usando busca linear. Para cada valor de N, mostre na tela o menor tempo (estimativa do melhor caso), o maior tempo (estimativa do pior caso) e o tempo médio (estimativa do caso médio) das M repetições com 7 casas após a vírgula. Mostre os dados no formato dado a seguir (**os valores são fictícios e não refletem a realidade e omitimos casas após a vírgula para uma melhor visualização**): 
+Faça um programa que crie iterativamente vetores com N valores, para N variando de 1 até 2000 de 200 em 200. Para cada vetor, selecione M=1000 valores aleatórios uniformemente no vetor e meça o tempo necessário para buscar o índice do elemento usando busca linear. Para cada valor de N, mostre na tela o menor tempo (estimativa do melhor caso), o maior tempo (estimativa do pior caso) e o tempo médio (estimativa do caso médio) das M repetições com 7 casas após a vírgula. Em resumo, deve ser realizado o seguinte experimento: 
+
+```
+srand(time(NULL));
+
+Para N de 1 a 2000 variando de 200 em 200: 
+    Crie um vetor V e o preencha com valores aleatórios 
+    Repita M vezes: 
+        // Gera um índice aleatório
+        int idx = rand() % N;
+        
+        // Seleciona o item daquela posição 
+        int valor = vector_get(V, idx);
+        
+        // Meça o tempo para encontrar o índice do item usando a busca linear 
+        double inicio = get_timestamp();
+        vector_find(V, valor);
+        double fim = get_timestamp();
+        double duracao = fim - inicio; 
+        
+        // Atualize as estatísticas de menor tempo, maior tempo e tempo médio.
+   
+    Mostre na tela o valor de N e o maior tempo, o menor tempo e a duração média dentre as M
+```
+
+Mostre os dados no formato dado a seguir (**os valores são fictícios e não refletem a realidade e omitimos casas após a vírgula para uma melhor visualização**): 
 
 ```
 N menor maior media 
