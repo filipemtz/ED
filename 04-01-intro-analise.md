@@ -1,9 +1,9 @@
 
 # Análise Empírica de Algoritmos
 
-Neste laboratório, vamos analisar de forma empírica (via experimentos computacionais) como o tempo de execução de diferentes algoritmos para uma dada tarefa se comportam para diferentes tamanhos e características de entradas. 
+**Contexto:** Neste laboratório, vamos analisar de forma empírica (via experimentos computacionais) como o tempo de execução de diferentes algoritmos para uma dada tarefa se comportam para diferentes tamanhos e características de entradas. 
 
-**TAREFA (DEADLINE: 12/04/2023): USE UM EDITOR TEXTO RICO COMO O WRITER DO LINUX OU GOOGLE DOCS PARA RESPONDER AS PERGUNTAS EM BULLET POINTS. ENVIE AS RESPOSTAS COMO PDF NA TAREFA DO AVA. ADICIONE IMAGENS DE GRÁFICOS NO TEXTO, SE ACHAR NECESSÁRIO, PARA AJUDAR NAS RESPOSTAS.**
+**Tarefa (Deadline: 12/04/2023):** Use um editor texto como o writer do linux ou google docs para responder as perguntas em tópicos. Envie as respostas como pdf na tarefa do AVA até a data limite. adicione imagens de gráficos no texto, se achar necessário, para ajudar nas respostas.
 
 **Nota**: Quem não implementou o tipo Vector, pode utilizar a implementação do tipo Vector disponível no AVA na Semana 02.
 
@@ -176,16 +176,16 @@ gnuplot> plot 'dados.txt' u 1:2 w l, 'dados.txt' u 1:3 w l
 
 Nesta tarefa, vamos **estimar** a performance do algoritmo de busca linear no melhor caso, pior caso e caso médio, assumindo que o item buscado está no vetor. 
 
-Faça um programa que crie iterativamente vetores com N valores, para N variando de 1 até 2000 de 200 em 250. Para cada vetor, selecione M=1000 valores aleatórios uniformemente no vetor e meça o tempo necessário para buscar o índice do elemento usando busca linear. Para cada valor de N, mostre na tela o menor tempo (estimativa do melhor caso), o maior tempo (estimativa do pior caso) e o tempo médio (estimativa do caso médio) das M repetições com 7 casas após a vírgula. Mostre os dados no formato dado a seguir (**os valores são fictícios e não refletem a realidade e omitimos casas após a vírgula para uma melhor visualização**): 
+Faça um programa que crie iterativamente vetores com N valores, para N variando de 1 até 2000 de 200 em 200. Para cada vetor, selecione M=1000 valores aleatórios uniformemente no vetor e meça o tempo necessário para buscar o índice do elemento usando busca linear. Para cada valor de N, mostre na tela o menor tempo (estimativa do melhor caso), o maior tempo (estimativa do pior caso) e o tempo médio (estimativa do caso médio) das M repetições com 7 casas após a vírgula. Mostre os dados no formato dado a seguir (**os valores são fictícios e não refletem a realidade e omitimos casas após a vírgula para uma melhor visualização**): 
 
 ```
-N menor maior media
+N menor maior media 
 1 0.01 0.3 0.10
-250 0.01 0.4 0.10
-500 0.01 0.5 0.20
+201 0.01 0.4 0.10
+401 0.01 0.5 0.20
 ...
-4750 0.01 1.3 0.45
-5000 0.01 1.5 0.50
+1801 0.01 1.3 0.45
+2001 0.01 1.5 0.50
 ```
 
 Execute o programa e use o operador ```>``` para salvar os valores exibidos na tela em um arquivo: 
