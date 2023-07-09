@@ -39,6 +39,8 @@
 
 1. Podemos ordenar um dado conjunto de n números construindo primeiro uma árvore de busca binária contendo esses números (usando TREE-INSERT repetidamente para inserir os números um a um) e então imprimindo os números por um percurso de árvore em in​ordem. Quais são os tempos de execução do pior caso e do melhor caso para esse algoritmo de ordenação?
 
+1. Faça uma função que receba uma árvore binária e retorne um Vector contendo seus elementos ordenados do maior para o menor. 
+
 1. Escreva a função de inserção em um heap de máximo que armazena inteiros. 
 
 1. Escreva a função de remoção do maior elemento, matendo a propriedade do heap, em um heap de máximo que armazena inteiros.
