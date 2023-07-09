@@ -11,7 +11,8 @@
 
 1. Escreva funções para inserção e remoção de elementos de uma tabela hash em que chaves são strings representando o CPF de uma pessoa e os valores associados são os dados da pessoa contendo nome, idade e altura. O tratamento de colisões é feito por endereçamento aberto com sondagem linear. A função de hash é dada por: 
 
-	h(k, i) = (h'(k) + i) mod m 
+	h(k, i) = (h'(k) + i) mod m
+
 	onde i é o número da tentativa, m é o tamanho da tabela hash e h'(k) é a função de hash de strings e dada implementada. 
 		
 1. Qual é a diferença entre a propriedade de árvore de busca binária e a propriedade de heap de mínimo? Desenhe o resultado da inserção da sequência de números a seguir em uma árvore binária e em um heap de mínimo: {21, 10, 5, 1,  16, 4, 17, 11, 20, 5, 3, 2, 0}.
@@ -21,10 +22,14 @@
 1. Suponha que temos números entre 1 e 1. 000 em uma árvore de busca binária e queremos procurar o número 363. Qual das seguintes sequências não poderia ser a sequência de nós examinados?
 
 	a) 2, 252, 401, 398, 330, 344, 397, 363.
-	b) 924, 220, 911, 244, 898, 258, 362, 363.
-	c) 925, 202, 911, 240, 912, 245, 363.
-	d) 2, 399, 387, 219, 266, 382, 381, 278, 363
-	e) 935, 278, 347, 621, 299, 392, 358, 363.
+
+ 	b) 924, 220, 911, 244, 898, 258, 362, 363.
+	
+ 	c) 925, 202, 911, 240, 912, 245, 363.
+	
+ 	d) 2, 399, 387, 219, 266, 382, 381, 278, 363
+	
+ 	e) 935, 278, 347, 621, 299, 392, 358, 363.
 
 1. Explique como um heap de máximo ou um árvore binária de busca podem ser usados para exibir uma sequência de números em ordem decrescente. Discuta as complexidades das operações para uma sequência arbitrária de números e no pior caso. 
 
