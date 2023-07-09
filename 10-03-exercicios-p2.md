@@ -46,3 +46,6 @@
 1. Escreva a função de remoção do maior elemento, matendo a propriedade do heap, em um heap de máximo que armazena inteiros.
 
 1.  Usando as duas funções acima, escreva uma função para ordenar um array de inteiros. 
+
+1. Dada uma implementação de deque contendo a estrutura e funções para construir, destruir e inserir elementos, implemente funções para acessar o i-ésimo elemento em O(1) e retornar a lista de elementos em um Vector. 
+
