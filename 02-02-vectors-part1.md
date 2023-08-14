@@ -112,7 +112,7 @@ int vector_find(Vector *v, data_type val);
 
 Vamos começar a modificar o arquivo ```vector.c``` para implementar as funções de construção e destruição de variáveis do tipo Vector. Inclua a biblioteca ```stdlib.h``` no início do arquivo pois ela contém as declarações das funções para alocação dinâmica de memória.
 
-1. Implemente a função ```Vector *vector_construct()```: Use a função calloc ([explicacao](http://mtm.ufsc.br/~azeredo/cursoC/aulas/ca60.html) para alocar espaço para um Vector. Em seguida, inicialize o tamanho alocado com um valor padrão (10, por exemplo) e o tamanho como zero. Por fim, use a função calloc novamente para alocar espaço para os dados do tipo ```data_type```. Deve ser reservado espaço para tantos itens quanto o valor atribuído ao tamanho alocado. 
+1. Implemente a função ```Vector *vector_construct()```: Use a função calloc ([explicacao](http://mtm.ufsc.br/~azeredo/cursoC/aulas/ca60.html)) para alocar espaço para um Vector. Em seguida, inicialize o tamanho alocado com um valor padrão (10, por exemplo) e o tamanho como zero. Por fim, use a função calloc novamente para alocar espaço para os dados do tipo ```data_type```. Deve ser reservado espaço para tantos itens quanto o valor atribuído ao tamanho alocado. 
 
 2. Implemente a função ```void vector_destroy(Vector *v)```: Use a função free ([explicacao](explicacao)) para liberar o espaço alocado para os itens do vetor e para liberar ```v```.
 
