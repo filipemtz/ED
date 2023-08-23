@@ -65,7 +65,7 @@ Nesta subseção, vamos utilizar apenas o arquivo ```vector.h```.
 typedef int data_type;
 ```
 
-A instrução acima define ```data_type``` como um apelido para o tipo ```int```. O tipo ```data_type``` pode ser usado exatamente como o tipo ```int``` para criar variáveis e como entrada e saída de funções. Na estrutura ```Vector``` e em suas funções, deve ser usado apenas o tipo ```data_type``` e o tipo ```int``` não deve ser mencionado. **A vantagem desta abordagem é que se quisermos mudar o tipo do s de ```int``` para outro tipo qualquer, só precisaremos mudar a linha que contém o ```typedef```**. 
+A instrução acima define ```data_type``` como um apelido para o tipo ```int```. O tipo ```data_type``` pode ser usado exatamente como o tipo ```int``` para criar variáveis e como entrada e saída de funções. Na estrutura ```Vector``` e em suas funções, deve ser usado apenas o tipo ```data_type``` e o tipo ```int``` não deve ser mencionado. **A vantagem desta abordagem é que se quisermos mudar o tipo do Vector de ```int``` para outro tipo qualquer, só precisaremos mudar a linha que contém o ```typedef```**. 
 
 3. Crie então a estrutura Vector contendo três atributos: 
 - um ponteiro do tipo ```data_type``` para indicar onde nossa sequência de dados está na memória; 
