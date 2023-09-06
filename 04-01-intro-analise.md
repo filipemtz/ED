@@ -3,7 +3,7 @@
 
 **Contexto:** Neste laboratório, vamos analisar de forma empírica (via experimentos computacionais) como o tempo de execução de diferentes algoritmos para uma dada tarefa se comportam para diferentes tamanhos e características de entradas. 
 
-**Tarefa (Deadline: 12/04/2023):** Use um editor texto como o libre office writer do linux ou google docs ou word para responder as perguntas em tópicos. Envie as respostas como pdf na tarefa do AVA até a data limite. adicione imagens de gráficos no texto, se achar necessário, para ajudar nas respostas.
+**Tarefa (Deadline: 17/09/2023):** Use um editor texto como o libre office writer do linux ou google docs ou word para responder as perguntas em tópicos. Envie as respostas como pdf na tarefa do AVA até a data limite. adicione imagens de gráficos no texto, se achar necessário, para ajudar nas respostas.
 
 **Nota**: Quem não implementou o tipo Vector, pode utilizar a implementação do tipo Vector disponível no AVA na Semana 02.
 
