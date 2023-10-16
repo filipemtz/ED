@@ -1,6 +1,16 @@
 
 # Exercícios de Preparação para a Prova
 
+1. Implemente uma fila genérica com operações de construir, destruir, enfileirar e desenfileirar usando um array circular. Assuma que o array terá no máximo 10 elementos simultaneamente. 
+
+2. Implemente uma fila genérica com operações de construir, destruir, enfileirar e desenfileirar usando uma lista duplamente encadeada.
+
+3. Dentre as estruturas de dados estudadas (vector, forward list, lista encadeada com ponteiro para o final e lista duplamente encadeada) quais são adequadas para implementar as operações de pilha com complexidade constante? E para implementar as operações de fila? Justifique.
+   
+5. Implemente uma pilha genérica com operações de construir, destruir, empilhar e desempilhar usando um array alocado dinamicamente.
+   
+7. Implemente uma pilha genérica com operações de construir, destruir, empilhar e desempilhar usando uma forward list.
+
 1. Enquanto uma pilha permite a inserção e exclusão de elementos em apenas uma extremidade, e uma fila permite a inserção em uma extremidade e a exclusão na outra extremidade, um deque (fila com duas extremidades) permite a inserção e exclusão em ambas as extremidades. Assumindo que é possível definir um número máximo de itens que serão inseridos no deque, use um array para implementar um deque e quatro procedimentos de tempo O(1) para inserir elementos e excluir elementos de ambas as extremidades. 
 
 2. Explique como implementar duas pilhas em um array A[1 . . n] de tal forma que nenhuma pilha estoure, a menos que o número total de elementos **em ambas as pilhas juntas** seja n. As operações PUSH e POP devem ser executadas em tempo O(1).
@@ -109,9 +119,9 @@ void insere_ordenado(Lista *lista, int x);
 
 11. Usando a função da questão anterior, implemente uma função para ordenação *in-place* de listas encadeadas com ponteiro para o último elemento. A complexidade de espaço adicional da solução não deve ser superior à O(1).
 
-12. Considere uma representação de matrizes esparsas dada por um vetor ordenado de nós em que: 
-* Cada nó representa um valor não nulo que contém o número da linha, da coluna e o valor da posição na matriz. 
-*  O vetor é ordenado pelo número da linha e, para itens na mesma linha, pelo número da coluna. 
+12. Matrizes esparsas são aqueles em que a maioria dos elementos são nulos. Na computação, existem diversas formas de representar matrizes esparsas de forma a minimizar o uso de memória e o custo computacional de algumas operações. Em geral, estas representações armazenam apenas os elementos não-nulos da matriz. Como partimos do pressuposto que a quantidade de não-nulos é subtancialmente menor que a de zeros, estas representações trazem ganhos em relação à representação densa (a representação normal em que os valores nulos são armazenados na matriz). Considere uma estrutura de dados para matrizes esparsas dada por um vetor ordenado de nós em que: 
+* Cada nó representa um valor não nulo que contém o número da linha, da coluna e o valor. 
+* O vetor é ordenado pelo número da linha e, para itens na mesma linha, pelo número da coluna. 
 
     **Exemplo 1**: A matriz 
 
