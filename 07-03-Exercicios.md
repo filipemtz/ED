@@ -11,11 +11,11 @@
    
 7. Implemente uma pilha genérica com operações de construir, destruir, empilhar e desempilhar usando uma forward list.
 
-8. Enquanto uma pilha permite a inserção e exclusão de elementos em apenas uma extremidade, e uma fila permite a inserção em uma extremidade e a exclusão na outra extremidade, um deque (fila com duas extremidades) permite a inserção e exclusão em ambas as extremidades. Assumindo que é possível definir um número máximo de itens que serão inseridos no deque, use um array para implementar um deque e quatro procedimentos de tempo O(1) para inserir elementos e excluir elementos de ambas as extremidades. 
+8. Enquanto uma pilha permite a inserção e exclusão de elementos em apenas uma extremidade, e uma fila permite a inserção em uma extremidade e a exclusão na outra extremidade, um deque (fila com duas extremidades) permite a inserção e exclusão em ambas as extremidades. Assumindo que é possível definir um número máximo de itens que serão inseridos no deque, use um array circular para implementar um deque e quatro procedimentos de tempo O(1) para inserir elementos e excluir elementos de ambas as extremidades. 
 
 9. Explique como implementar duas pilhas em um array A[1 . . n] de tal forma que nenhuma pilha estoure, a menos que o número total de elementos **em ambas as pilhas juntas** seja n. As operações PUSH e POP devem ser executadas em tempo O(1).
 
-10. [leetcode 225 e 232] Mostre como implementar uma pilha usando duas filas. Ou a operação de push ou a operação de pop de ter complexidade O(1). A outra operação não pode ser pior que linear. Descreva também como implementar uma pilha usando apenas uma fila. As mesmas restrições sobre a complexidade se aplicam.
+10. [leetcode 225 e 232] Mostre como implementar uma pilha usando duas filas. Ou a operação de push ou a operação de pop deve ter complexidade O(1). A outra operação não pode ser pior que linear. Descreva também como implementar uma pilha usando apenas uma fila. As mesmas restrições sobre a complexidade se aplicam.
 
 11. Considere uma lista encadeada para armazenar informações de diferentes pessoas (ambas as estruturas são dadas a seguir). Escreva uma função para recuperar os dados de uma pessoa a partir do CPF. 
 
