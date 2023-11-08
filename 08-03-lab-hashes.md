@@ -3,8 +3,6 @@
 
 O objetivo deste laboratório é implementar uma tabela hash que permita o uso de diferentes tipos de chaves e com tratamento de colisões por encadeamento.  
 
-**IMPORTANTE**: Veja o exercício a ser entregue no [testr](http://200.137.66.71:8000/).
-
 ## Estrutura da Tabela Hash 
 
 Vamos começar criando a estrutura da tabela hash. A estrutura será dada por um array de com um tamanho pré-definido *n* (o número de posições da tabela) de ponteiros para listas encadeadas. Cada chave será mapeada em uma posição da tabela, isto é, em uma das listas encadeadas.    
@@ -169,21 +167,17 @@ A função ```hash_table_set``` pode ser usada para inserir ou atualizar um valo
 
 A função ```hash_table_get``` é similar à função ```hash_table_set```. A chave é transformada em inteiro e hash modular é usado para calcular o índice do bucket. Para cada elemento da lista do bucket, verificamos se a chave é igual à buscada. Se sim, o valor associado é retornado. Se a chave não for encontrada, retornamos ```NULL```.
 
-## Teste da Tabela Hash: Armazenamento de Strings
+## Teste da Tabela Hash: Programa para contagem do número de palavras em um texto
 
-O exercício do [testr](http://200.137.66.71:8000/) provê uma função main com funções de hash e de comparação já implementadas. Analise o código para compreender como as funções serão usadas. A seguir, submeta a sua implementação do arquivo hash.c como resposta.
+Faça um programa que leia um arquivo de texto e mostre na tela a frequência das palavras. Para isto, use uma tabela hash em que as chaves são as palavras e os valores associados são as frequências das palavras. Para cada palavra do arquivo, use ```hash_table_get``` para verificar se a frequência da palavra existe na tabela. Se sim, incremente a frequência. Se não, use ```hash_table_set``` para inserir a nova palavra com frequência 1. 
+
+Será necessário implementar uma função ```hash``` para converter strings em inteiros. Use a função de hash universal apresentada em sala. Note também que como as funções de manipulação da hash esperam ponteiros, será necessário alocar o inteiro para armazenar a frequência usando malloc/calloc. 
 
 ## Teste da Tabela Hash: Armazenando células de um labirinto
 
 Considere um tipo ```Celula``` que contém dois inteiros (linha, coluna) representando a posição de uma célula da um labirinto. Faça um programa de exemplo que mostre como associar à uma célula um número ```double```. No trabalho, tal estrutura pode ser usada para associar à cada célula o  custo total do caminho da origem até o nó. No exercício, use valores quaisquer apenas para testar o programa. 
 
 Como função de hash do tipo Celula, use a fórmula ```linha * largura_labirinto + coluna``` ou a operação ```linha * P1 XOR coluna * P2```, onde ```P1``` e ```P2``` são primos grandes. A primeira opção é mais simples e a segunda gera uma maior dispersão das células nos buckets.
-
-## Teste da Tabela Hash: Programa para contagem do número de palavras em um texto
-
-Faça um programa que leia um arquivo de texto e mostre na tela a frequência das palavras. Para isto, use uma tabela hash em que as chaves são as palavras e os valores associados são as frequências das palavras. Para cada palavra do arquivo, use ```hash_table_get``` para verificar se a frequência da palavra existe na tabela. Se sim, incremente a frequência. Se não, use ```hash_table_set``` para inserir a nova palavra com frequência 1. 
-
-Será necessário implementar uma função ```hash``` para converter strings em inteiros. Use a função de hash universal apresentada em sala. Note também que como as funções de manipulação da hash esperam ponteiros, será necessário alocar o inteiro para armazenar a frequência usando malloc/calloc. 
 
 ## Iteradores da Tabela Hash 
 
