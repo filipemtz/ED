@@ -5,7 +5,7 @@ Neste laboratório, você deverá implementar os tipos abstratos de dados Pilha 
 
 ## Pilha (Stack)
 
-O código a seguir descreve o arquivo de cabeçalho stack.h. Escreva o arquivo stack.c que define a estrutura Stack e as funções listadas. Use a implementação para responder a questão do [Testr](http://200.137.66.71:8000/).
+O código a seguir descreve o arquivo de cabeçalho stack.h. Escreva o arquivo stack.c que define a estrutura Stack e as funções listadas. Use a implementação para responder a questão do [Testr](http://200.137.66.73:8000/).
 
 ```
 #ifndef _STACK_H_
@@ -34,7 +34,7 @@ void stack_destroy(Stack *s);
 
 ## Fila (Queue)
 
-O código a seguir descreve o arquivo de cabeçalho queue.h. Escreva o arquivo queue.c que define a estrutura Queue e as funções listadas. Use a implementação para responder a questão do [Testr](http://200.137.66.71:8000/).
+O código a seguir descreve o arquivo de cabeçalho queue.h. Escreva o arquivo queue.c que define a estrutura Queue e as funções listadas. Use a implementação para responder a questão do [Testr](http://200.137.66.73:8000/).
 
 ```
 #ifndef _QUEUE_H_
