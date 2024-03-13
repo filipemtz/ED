@@ -3,7 +3,7 @@
 
 Neste laboratório, vamos transformar listas com encadeamento para frente em listas duplamente encadeadas. Em seguida, vamos implementar iteradores para percorrer estas listas. 
 
-Use as funções para responder os exercícios no [Testr](http://200.137.66.71:8000/testr/courses/). Verifique usando o valgrind que não foram feitos acessos indevidos à memória e que todos os espaços alocados foram liberados. 
+Use as funções para responder os exercícios no [Testr](http://200.137.66.73:8000/testr/courses/). Verifique usando o valgrind que não foram feitos acessos indevidos à memória e que todos os espaços alocados foram liberados. 
 
 ## Atividades 
 
