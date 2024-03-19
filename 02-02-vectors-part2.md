@@ -44,7 +44,7 @@ A função ```vector_remove``` deve receber um ponteiro para o vetor e um índic
 
 Use as funções para resolver os dois primeiros exercícios da seção no [Testr](http://200.137.66.73:8000/).
 
-## 9. Inserção na i-esima posicao
+## 9. Inserção na i-ésima posição
 
 A função ```vector_insert``` deve receber um ponteiro para o vetor, um índice ```i``` e um valor ```val``` como parâmetros e inserir o valor ```val``` na i-ésima posição do vetor. Para "abrir   espaço" para o novo item, todos os elementos à direita de ```i``` devem ser deslocados de uma posição para a direita. Se o vetor já estiver cheio, ele deve ser realocado automaticamente e  a função deve atualizar o tamanho do vetor.
 
