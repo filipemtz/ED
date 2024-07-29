@@ -1,9 +1,13 @@
 
-# Exercícios de Preparação para a Prova 1
+# Exercícios de Preparação para a P1
 
 1. Dentre as estruturas de dados estudadas (vector, heap e array circular) quais são adequadas para implementar as operações de pilha com complexidade constante? E para implementar as operações de fila? Justifique.
 
-1. Considere um arquivo contendo $k$ vetores de números ordenados de forma crescente. Seu objetivo é unir os dados destes vetores em um novo vetor, também ordenado. Duas soluções possíveis são dadas a seguir. Sua tarefa é implementar as soluções e discutir a complexidade das soluções em termos de uso de memória e tempo de computação.
+<i style="color:pink">
+Exemplo de Resposta: As operações de pilhas são a inserção e a remoção do elemento mais recente (last-in first-out). Vectors e arrays circulares podem ser usados para implementar estas operações com complexidade constante via inserção e remoção ao final. Filas possuem duas operações, a inserção e a remoção do elemento mais antigo (que foi inserido primeiro) da fila (first-in first-out). Para implementar as operações de fila, novos elementos devem ser inseridos em uma ponta da estrutura de dados e removidos da outra ponta. Arrays circulares são adequados por permitirem a inserção e remoção nas duas pontas (início e final) com complexidade constante. Vectors, por outro lado, permitem inserção e remoção ao final com complexidade constante, mas inserção e remoção no início têm complexidade linear.
+</i>
+
+1. Considere um conjunto de $k$ arquivos, cada um contendo um vetor de números ordenados de forma crescente. Seu objetivo é unir os dados destes vetores em um novo vetor, também ordenado de forma crescente. Algumas soluções possíveis são dadas a seguir. Sua tarefa é implementar as soluções e discutir suas complexidades em termos de uso de memória e tempo de computação.
    1. Ler um elemento de cada vez do arquivo e adicionar em um min-heap. Em seguida, remover iterativamente o menor elemento do heap de forma a retornar os dados de entrada em ordem.
    1. Ler os elementos um a um do arquivo e adicioná-los à um vector. Em seguida, ordenar o vector.
    1. Como ilustrado abaixo, ler os k vetores para a memória principal e, começando da primeira posição, comparar os $k$ elementos na posição $0$ e adicionar na saída o menor dentre eles. Se o menor elemento é do segundo vector, o índice de referência deste array é incrementado para a posição $1$ (enquanto continua sendo $0$ para os demais). Os elementos são comparados novamente, o menor é adicionado e o índice do respectivo array é incrementado. O processo se repete até que todos os elementos sejam adicionados na saída. Na figura, os elementos $0, 1, 2 e 3$ já foram inseridos. A estratégia consiste em manter um índice de referência por vector e caminhar com os índices enquanto elementos são adicionados no vetor de saída.
