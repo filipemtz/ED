@@ -4,79 +4,189 @@
 
 **Listas encadeadas** são estruturas de dados dinâmicas que armazenam uma coleção de elementos, cada um contendo um dado e um ponteiro para o próximo elemento. Ao contrário dos vetores, as listas encadeadas não possuem um tamanho fixo pré-determinado, permitindo a inserção e remoção de elementos de forma eficiente em qualquer posição.
 
-**Objetivo:** Implementar as operações básicas de uma lista encadeada, compreendendo sua estrutura e funcionamento.
+![lista encadeada](imgs/linked-lists.png)
 
-### Estrutura da Lista Encadeada
+O objetivo deste laboratório será implementar as operações básicas de uma lista encadeada, compreendendo sua estrutura e funcionamento.
 
-```c
-typedef struct node {
-    int data;
-    struct node *next;
-} Node;
-```
+### Estrutura de um Nó
+
+Cada nó contém dois atributos:
 
 * **data:** Armazena o valor do elemento.
 * **next:** Ponteiro para o próximo nó da lista.
 
-### Funcionalidades a serem implementadas
+Criaremos funções para alocar e inicializar um nó, para recuperar seus atributos e para destruir um nó. Crie um arquivo `node.h` com o seguinte conteúdo:
 
-#### 1. Construção e Destruição
-* **create_node(int data):** Cria um novo nó com o dado especificado.
-* **insert_at_beginning(Node** **head, int data):** Insere um novo nó no início da lista.
-* **print_list(Node *head):** Imprime todos os elementos da lista.
-* **delete_list(Node **head):** Libera toda a memória alocada para a lista.
+```c
+#ifndef _NODE_H_
+#define _NODE_H_
 
-#### 2. Acesso e Modificação
-* **get_size(Node *head):** Retorna o número de elementos na lista.
-* **get_element_at(Node *head, int index):** Retorna o elemento na posição especificada.
-* **set_element_at(Node *head, int index, int data):** Altera o valor do elemento na posição especificada.
+typedef data_type int;
+typedef struct Node Node;
 
-#### 3. Remoção
-* **delete_at_beginning(Node **head):** Remove o primeiro nó da lista.
-* **delete_element(Node **head, int data):** Remove o primeiro nó com o dado especificado.
+struct Node {
+    data_type data;
+    Node *next;
+};
 
-#### 4. Inserção no Final
-* **insert_at_end(Node **head, int data):** Insere um novo nó no final da lista.
+Node *node_construct(data_type value, Node *next);
 
-#### 5. Iteradores
-* **create_iterator(Node *head):** Cria um iterador para percorrer a lista.
-* **has_next(Iterator *iter):** Verifica se há um próximo elemento.
-* **next(Iterator *iter):** Retorna o próximo elemento e avança o iterador.
+data_type node_value(Node *node);
+Node* node_next(Node *node);
 
-#### 6. Inserção e Remoção usando Iteradores
-* **insert_after(Iterator *iter, int data):** Insere um novo nó após o elemento apontado pelo iterador.
-* **remove_current(Iterator *iter):** Remove o elemento apontado pelo iterador.
+void node_destroy(Node *node);
 
-#### 7. Concatenação
-* **concatenate(Node *head1, Node *head2):** Concatena duas listas.
+#endif
+```
 
-#### 8. Remoção de Todos os Elementos
-* **delete_all(Node **head):** Remove todos os elementos da lista.
+Implemente as funções no arquivo `node.c` e resolva a primeira questão do Testr. Para resolver esta questão, ainda não é necessário criar o tipo `ForwardList`.
 
-#### 9. Inversão
-* **reverse(Node **head):** Inverte a ordem dos elementos da lista.
 
-### Estrutura do Projeto
-Similar ao roteiro anterior, utilize os arquivos `linked_list.h` e `linked_list.c` para a implementação da lista encadeada e o arquivo `main.c` para os testes.
+### Estruturas de Listas Encadeadas
 
-### Exercícios
-1. **Implemente as funções:** Crie as funções especificadas acima, utilizando alocação dinâmica de memória para os nós.
-2. **Teste as funções:** Escreva testes unitários para cada função, verificando se as operações estão sendo realizadas corretamente.
-3. **Implemente iteradores:** Crie uma estrutura para representar um iterador e implemente as funções para percorrer a lista.
-4. **Concatenação:** Implemente a função `concatenate` que une duas listas em uma única lista.
-5. **Inversão:** Implemente a função `reverse` que inverte a ordem dos elementos da lista.
+O tipo `ForwardList` será utilizado para encapsular (esconder do usuário da biblioteca) a gestão dos nós. O usuário terá acesso à uma interface de funções para, por exemplo, inserção, busca e remoção de elementos, sem ter contato com o tipo `Node`. Crie o arquivo `forward_list.h` contendo a seguinte estrutura:
 
-### Dicas
-* **Alocação dinâmica:** Utilize `malloc` para alocar memória para novos nós e `free` para liberar a memória quando não for mais necessária.
-* **Ponteiros:** Entenda como os ponteiros funcionam para manipular a estrutura da lista.
-* **Casos especiais:** Considere os casos especiais, como listas vazias ou com apenas um elemento.
-* **Eficiência:** Procure por soluções eficientes para cada operação, evitando cópias desnecessárias de dados.
-* **Teste:** Crie testes abrangentes para garantir que sua implementação está correta.
+```c
+typedef struct
+{
+    Node *head;
+    int size;
+} ForwardList;
+```
 
-**Observação:** Este roteiro é uma base para a implementação de listas encadeadas. Você pode expandir este projeto com outras funcionalidades, como listas duplamente encadeadas, listas circulares, etc.
+Ao longo deste laboratório, as funções abaixo deverão ser implementadas. Adicione suas assinaturas ao arquivo `forward_list.h` e siga os exercícios do Testr para implementar as funções sequencialmente.
 
-**Recursos adicionais:**
-* **Livros:** Estruturas de Dados de Cormen, Leiserson, Rivest e Stein.
-* **Cursos online:** Plataformas como Coursera, edX e Udemy oferecem diversos cursos sobre estruturas de dados.
+```c
+/**
+ * @brief Construct a new Linked List:: Linked List object
+ *  Allocates memory for a new linked list and returns a pointer to it.
+ * @return ForwardList*
+ * Pointer to the newly allocated linked list.
+ * @note
+ * The caller is responsible for freeing the memory allocated for the linked list using forward_list_destroy().
+ *
+ */
+ForwardList *forward_list_construct();
 
-Com este roteiro, você terá uma base sólida para entender e implementar listas encadeadas, uma das estruturas de dados mais importantes em programação.
+/**
+ * @brief Destroys the linked list.
+ *  Frees the memory allocated for the linked list and all its nodes.
+ * @param l
+ * Pointer to the linked list.
+ *
+ */
+void forward_list_destroy(ForwardList *l);
+
+/**
+ * @brief Returns the size of the linked list.
+ *  Returns the number of nodes in the linked list.
+ * @param l
+ * Pointer to the linked list.
+ * @return int
+ * Number of nodes in the linked list.
+ *
+ */
+int forward_list_size(ForwardList *l);
+
+/**
+ * @brief Pushes a new node to the front of the linked list.
+ *  Allocates memory for a new node and inserts it at the front of the linked list.
+ * @param l
+ * Pointer to the linked list.
+ * @param data
+ * Pointer to the data to be stored in the new node.
+ *
+ */
+void forward_list_push_front(ForwardList *l, data_type data);
+
+/**
+ * @brief Print the elements of the linked list.
+ *  Print the elements of the linked list.
+ * @param l
+ * Pointer to the linked list.
+ * @param print_fn
+ * Pointer to the function to print data_type values.
+ *
+ */
+void forward_list_print(ForwardList *l, void (*print_fn)(data_type));
+
+/**
+ * @brief Returns the data stored in the node at the given index.
+ * @param l
+ * Pointer to the linked list.
+ * @param i
+ * Index of the node.
+ * @return data_type
+ * Data stored in the node at the given index.
+ *
+ */
+data_type forward_list_get(ForwardList *l, int i);
+
+/**
+ * @brief Remove the first node of the linked list and returns its data.
+ * @param l
+ * Pointer to the linked list.
+ * @return data_type
+ * Pointer to the data stored in the first node of the linked list that was removed.
+ *
+ */
+data_type forward_list_pop_front(ForwardList *l);
+
+/**
+ * @brief Removes all nodes from the linked list.
+ * Removes all nodes from the linked list and frees the memory allocated for them.
+ * @param l
+ * Pointer to the linked list.
+ * @note
+ * The caller is responsible for freeing the memory allocated for the data stored in the nodes.
+ */
+void forward_list_clear(ForwardList *l);
+
+/**
+ * @brief Removes all nodes with the given value from the linked list.
+ * Removes all nodes with the given value from the linked list and frees the memory allocated for them.
+ * @param l
+ * Pointer to the linked list.
+ * @param val
+ * Value to be removed from the linked list.
+ */
+void forward_list_remove(ForwardList *l, data_type val);
+
+/**
+ * @brief Adds all nodes from the given list to the end of the linked list.
+ * @param l
+ * Pointer to the linked list.
+ * @param m
+ * Pointer to the linked list to be added to the end of the linked list.
+ */
+void forward_list_cat(ForwardList *l, ForwardList *m);
+
+/**
+ * @brief Sorts the linked list.
+ * Sorts the linked list.
+ * @param l
+ * Pointer to the linked list.
+ */
+void forward_list_sort(ForwardList *l);
+
+
+/**
+ * @brief Create a new list given by the reverse of the given list.
+ * @param l
+ * Pointer to the linked list.
+ * @return ForwardList*
+ * Pointer to the newly allocated linked list.
+ */
+ForwardList *forward_list_reverse(ForwardList *l);
+
+/**
+ * @brief Removes all duplicate values from the linked list.
+ * Removes all duplicate values from the linked list and frees the memory allocated for them.
+ * @param l
+ * Pointer to the linked list.
+ * @note
+ * The linked list must be sorted.
+ */
+void forward_list_unique(ForwardList *l);
+```
+
